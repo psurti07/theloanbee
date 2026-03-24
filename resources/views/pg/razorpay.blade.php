@@ -44,7 +44,7 @@
           "currency": "INR",
           "order_id": orderid,
           "name": "TheLoanbee",
-          "image": "https://theloanbee.com/uat/assets/images/logo/favicon.ico",
+          "image": "https://theloanbee.com/assets/images/logo/favicon.ico",
           "description": description,
           "prefill": {
             "name": fullname,

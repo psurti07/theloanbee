@@ -18,9 +18,9 @@
                 height: 100%;
                 background-repeat: repeat;
                 background-position: center top;
-                background-image: url(https://theloanbee.com/uat/assets/images/mail-bgm.png);
+                background-image: url(https://theloanbee.com/assets/images/mail-bgm.png);
                 background-color: #f9f9f9;
-                " background="https://theloanbee.com/uat/front/images/bg-01.webp">
+                " background="https://theloanbee.com/front/images/bg-01.webp">
         <tbody>
         <tr>
             <td class="es-m-margin" valign="top" style="padding: 0; margin: 0;">
@@ -60,9 +60,9 @@
                                                                 class="es-m-txt-c"
                                                                 style="padding: 0; margin: 0; padding-top: 5px; font-size: 0;">
                                                                 <a target="_blank"
-                                                                   href="https://theloanbee.com/uat/"
+                                                                   href="https://theloanbee.com/"
                                                                    style="-webkit-text-size-adjust: none; -ms-text-size-adjust: none; mso-line-height-rule: exactly; text-decoration: underline; color: #000f26; font-size: 14px;">
-                                                                    <img src="https://theloanbee.com/uat/front/images/logo/logo.png"
+                                                                    <img src="https://theloanbee.com/front/images/logo/logo.png"
                                                                          alt="TheLoanbee"
                                                                          style="display: block; border: 0; outline: 0; text-decoration: none; -ms-interpolation-mode: bicubic;"
                                                                          width="190"
@@ -110,9 +110,9 @@
                                                         <tbody>
                                                         <tr>
                                                             <td align="center"
-                                                                style="padding: 20px; margin: 0; line-height: 2rem;    background-color: #b4c7d5;border-top-right-radius:12px;border-top-left-radius:12px;">
+                                                                style="padding: 20px; margin: 0; line-height: 2rem;    background-color: #fff9ea;border-top-right-radius:12px;border-top-left-radius:12px;">
                                                                 <p
-                                                                    style="font-size:2.2rem;color:#0e5281;font-weight:600">
+                                                                    style="font-size:2.2rem;color:#133355;font-weight:600">
                                                                     Congratulations !
                                                                 </p>
                                                             </td>
@@ -193,19 +193,19 @@
                                                                                                 ">
                                                                     <a target="_blank"
                                                                        style="-webkit-text-size-adjust: none; -ms-text-size-adjust: none; mso-line-height-rule: exactly; text-decoration: none; color: #000f26; font-size: 14px;"
-                                                                       href="https://theloanbee.com/uat/privacy-policy">
+                                                                       href="https://theloanbee.com/privacy-policy">
                                                                         Privacy Policy
                                                                     </a>
                                                                     &nbsp; | &nbsp;
                                                                     <a target="_blank"
                                                                        style="-webkit-text-size-adjust: none; -ms-text-size-adjust: none; mso-line-height-rule: exactly; text-decoration: none; color: #000f26; font-size: 14px;"
-                                                                       href="https://theloanbee.com/uat/terms-and-conditions">
+                                                                       href="https://theloanbee.com/terms-and-conditions">
                                                                         Terms &amp; Conditions
                                                                     </a>
                                                                     &nbsp; | &nbsp;
                                                                     <a target="_blank"
                                                                        style="-webkit-text-size-adjust: none; -ms-text-size-adjust: none; mso-line-height-rule: exactly; text-decoration: none; color: #000f26; font-size: 14px;"
-                                                                       href="https://theloanbee.com/uat/raise-request">
+                                                                       href="https://theloanbee.com/raise-request">
                                                                         Raise a request
                                                                     </a>
                                                                     &nbsp; | &nbsp;

@@ -112,8 +112,8 @@
                                                             <tbody>
                                                                 <tr>
                                                                     <td class="es-m-txt-c" style="padding: 0; margin: 0; padding-top: 5px; font-size: 0;">
-                                                                        <a target="_blank" href="https://theloanbee.com/uat/" style="-webkit-text-size-adjust: none; -ms-text-size-adjust: none; mso-line-height-rule: exactly; text-decoration: underline; color: #000f26; font-size: 14px;">
-                                                                            <img src="https://theloanbee.com/uat/front/images/logo/logo.png" alt="TheLoanbee" style="display: block; border: 0; outline: 0; text-decoration: none; -ms-interpolation-mode: bicubic;" width="190" title="TheLoanbee">
+                                                                        <a target="_blank" href="https://theloanbee.com/" style="-webkit-text-size-adjust: none; -ms-text-size-adjust: none; mso-line-height-rule: exactly; text-decoration: underline; color: #000f26; font-size: 14px;">
+                                                                            <img src="https://theloanbee.com/front/images/logo/logo.png" alt="TheLoanbee" style="display: block; border: 0; outline: 0; text-decoration: none; -ms-interpolation-mode: bicubic;" width="190" title="TheLoanbee">
                                                                         </a>
                                                                     </td>
                                                                 </tr>
@@ -360,7 +360,7 @@
                                                                                                 margin-top: 25px;
                                                                                                 display: block;
                                                                                             ">
-                                                                                        <a href="{{ $userData->acc_type==1?'https://theloanbee.com/uat/self-apply':'https://theloanbee.com/uat/loan-agent' }}" style="
+                                                                                        <a href="{{ $userData->acc_type==1?'https://theloanbee.com/self-apply':'https://theloanbee.com/loan-agent' }}" style="
                                                                                                     background-color: #1ebc62;
                                                                                                     color: #fff;
                                                                                                     font-family: Poppins, sans-serif;
