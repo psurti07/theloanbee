@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Mar 16, 2026 at 05:06 AM
+-- Generation Time: Mar 30, 2026 at 06:18 AM
 -- Server version: 9.1.0
 -- PHP Version: 8.3.14
 
@@ -31,13 +31,13 @@ DROP TABLE IF EXISTS `administrations`;
 CREATE TABLE IF NOT EXISTS `administrations` (
   `id` int UNSIGNED NOT NULL AUTO_INCREMENT,
   `rec_date` datetime NOT NULL,
-  `fullname` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `fullname` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `dob` date DEFAULT NULL,
-  `mobile` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `emailid` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `staff_code` varchar(99) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `position` varchar(299) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `mobile` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `emailid` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `password` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `staff_code` varchar(99) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `position` varchar(299) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `role` int NOT NULL DEFAULT '1' COMMENT '0=Admin,1=OfficeStaff, 2=Hire-Support-Staff,3=ItStaff,4=Accounting, 5=Self-Support-Staff, 7=Assistant-Support-Staff\r\n',
   `isActive` tinyint NOT NULL DEFAULT '1' COMMENT '0 = No, 1 = Yes',
   `isDelete` tinyint NOT NULL DEFAULT '0' COMMENT '0 = No, 1 = Yes',
@@ -49,7 +49,7 @@ CREATE TABLE IF NOT EXISTS `administrations` (
 --
 
 INSERT INTO `administrations` (`id`, `rec_date`, `fullname`, `dob`, `mobile`, `emailid`, `password`, `staff_code`, `position`, `role`, `isActive`, `isDelete`) VALUES
-(1, '2023-10-12 05:03:22', 'Verloop Web', NULL, '9408881214', 'info@verloopweb.com', '$2y$12$2xs82qEMMjuhA4XEmOjwpunhy3W4sf1r/.1eMj9p/AeQnMJQZqTY2', NULL, NULL, 6, 1, 0);
+(1, '2023-10-12 05:03:22', 'Verloop Web', NULL, '9408881214', 'info@verloopweb.com', '$2y$12$pVoOX68nAk0ocoI8NU2wgeZGV6v0fwUiU4JR1jXRjliZR72HsiB3.', NULL, NULL, 6, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -107,12 +107,12 @@ DROP TABLE IF EXISTS `aisensy_settings`;
 CREATE TABLE IF NOT EXISTS `aisensy_settings` (
   `id` int NOT NULL AUTO_INCREMENT,
   `rec_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `product` varchar(55) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'SA, LA, LAT',
-  `type` varchar(99) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'remarketing, buy now, pgsuccess, pgfailed',
-  `api_key` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `campaign_name` varchar(99) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `media_url` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `media_filename` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `product` varchar(55) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'SA, LA, LAT',
+  `type` varchar(99) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'remarketing, buy now, pgsuccess, pgfailed',
+  `api_key` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `campaign_name` varchar(99) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `media_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `media_filename` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -146,7 +146,14 @@ CREATE TABLE IF NOT EXISTS `application_remarks` (
   PRIMARY KEY (`id`),
   KEY `loan_application_id` (`application_id`),
   KEY `administration_id` (`staff_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `application_remarks`
+--
+
+INSERT INTO `application_remarks` (`id`, `rec_date`, `entry_at`, `service`, `subject`, `notes`, `application_id`, `staff_id`) VALUES
+(1, '2026-03-30 11:28:14', '2026-03-30 11:28:14', 5, '9', '', 1, 5);
 
 -- --------------------------------------------------------
 
@@ -322,8 +329,8 @@ CREATE TABLE IF NOT EXISTS `bulksms` (
 
 DROP TABLE IF EXISTS `cache`;
 CREATE TABLE IF NOT EXISTS `cache` (
-  `key` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `value` mediumtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `key` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `value` mediumtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `expiration` int NOT NULL,
   PRIMARY KEY (`key`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -336,8 +343,8 @@ CREATE TABLE IF NOT EXISTS `cache` (
 
 DROP TABLE IF EXISTS `cache_locks`;
 CREATE TABLE IF NOT EXISTS `cache_locks` (
-  `key` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `owner` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `key` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `owner` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `expiration` int NOT NULL,
   PRIMARY KEY (`key`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -494,12 +501,12 @@ CREATE TABLE IF NOT EXISTS `cipherpayentry` (
   `rec_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `entryfor` int NOT NULL COMMENT '1=Customer,2=Channel,11=SelfApply,12=Loan Agent, 3=LA_Offer_1,4=LA_Offer_2,5=LA_Offer_3,6=SA_Offer_1,7=SA_Offer_2,8=SA_Offer_3,9=SA_Offer_4,10=LA_Offer_4',
   `userid` int NOT NULL,
-  `orderid` varchar(99) COLLATE utf8mb3_unicode_ci NOT NULL,
+  `orderid` varchar(99) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
   `orderamount` float(11,2) NOT NULL,
-  `ordernote` varchar(256) COLLATE utf8mb3_unicode_ci DEFAULT NULL,
-  `referenceid` varchar(256) COLLATE utf8mb3_unicode_ci DEFAULT NULL,
-  `txstatus` varchar(99) COLLATE utf8mb3_unicode_ci DEFAULT NULL,
-  `paymentmode` varchar(99) COLLATE utf8mb3_unicode_ci DEFAULT NULL,
+  `ordernote` varchar(256) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
+  `referenceid` varchar(256) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
+  `txstatus` varchar(99) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
+  `paymentmode` varchar(99) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
@@ -594,11 +601,11 @@ CREATE TABLE IF NOT EXISTS `enroll_services` (
 DROP TABLE IF EXISTS `failed_jobs`;
 CREATE TABLE IF NOT EXISTS `failed_jobs` (
   `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
-  `uuid` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `connection` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `queue` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `payload` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `exception` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `uuid` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `connection` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `queue` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `payload` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `exception` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `failed_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   UNIQUE KEY `failed_jobs_uuid_unique` (`uuid`)
@@ -615,12 +622,20 @@ CREATE TABLE IF NOT EXISTS `fb_ads_entry` (
   `id` int NOT NULL AUTO_INCREMENT,
   `rec_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `userid` int DEFAULT NULL,
-  `fbclid` varchar(299) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `send_data` longtext COLLATE utf8mb4_unicode_ci,
-  `received_data` longtext COLLATE utf8mb4_unicode_ci,
+  `fbclid` varchar(299) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `send_data` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `received_data` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   PRIMARY KEY (`id`),
   KEY `userid` (`userid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `fb_ads_entry`
+--
+
+INSERT INTO `fb_ads_entry` (`id`, `rec_date`, `userid`, `fbclid`, `send_data`, `received_data`) VALUES
+(1, '2026-03-30 11:16:40', 2, NULL, NULL, NULL),
+(2, '2026-03-30 11:23:03', 1, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -719,11 +734,11 @@ DROP TABLE IF EXISTS `interakt_settings`;
 CREATE TABLE IF NOT EXISTS `interakt_settings` (
   `id` int NOT NULL AUTO_INCREMENT,
   `rec_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `product` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'SA, LA',
-  `type` varchar(199) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'remarketing, getoffer, pgsuccess,pgfailed',
-  `template_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `img_url` text COLLATE utf8mb4_unicode_ci,
-  `api_key` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `product` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'SA, LA',
+  `type` varchar(199) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'remarketing, getoffer, pgsuccess,pgfailed',
+  `template_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `img_url` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `api_key` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -764,7 +779,14 @@ CREATE TABLE IF NOT EXISTS `invoices` (
   `is_refund` tinyint NOT NULL DEFAULT '0' COMMENT '0=not, 1=refund',
   `isdelete` tinyint NOT NULL DEFAULT '0' COMMENT '0=active,1=delete',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `invoices`
+--
+
+INSERT INTO `invoices` (`id`, `rec_date`, `userid`, `cardid`, `inv_prefix`, `inv_number`, `inv_date`, `inv_price`, `inv_cgst`, `inv_sgst`, `inv_igst`, `inv_grandtotal`, `remarks`, `is_refund`, `isdelete`) VALUES
+(2, '2026-03-30 11:28:14', 1, 1, 'SA_', 1235, '2026-03-30', 1, 0.09, 0.09, 0, 1.18, NULL, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -775,8 +797,8 @@ CREATE TABLE IF NOT EXISTS `invoices` (
 DROP TABLE IF EXISTS `jobs`;
 CREATE TABLE IF NOT EXISTS `jobs` (
   `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
-  `queue` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `payload` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `queue` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `payload` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `attempts` tinyint UNSIGNED NOT NULL,
   `reserved_at` int UNSIGNED DEFAULT NULL,
   `available_at` int UNSIGNED NOT NULL,
@@ -891,7 +913,14 @@ CREATE TABLE IF NOT EXISTS `loan_applications` (
   `isDelete` tinyint NOT NULL DEFAULT '0' COMMENT '0=active, 1=delete',
   PRIMARY KEY (`id`),
   KEY `userid` (`userid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `loan_applications`
+--
+
+INSERT INTO `loan_applications` (`id`, `rec_date`, `userid`, `loan_amount`, `user_type`, `loan_type`, `monthly_income`, `cibilscore`, `loan_purpose`, `currentemi`, `emibounce`, `application_number`, `loantenure`, `status`, `isDelete`) VALUES
+(1, '2026-03-30 11:28:14', 1, 500000, 1, 1, '50000', 0, 'Personal Use', 5000, 0, 'x7Lr7BDH', 0, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -980,7 +1009,14 @@ CREATE TABLE IF NOT EXISTS `membership_orders` (
   `isActive` int NOT NULL DEFAULT '1',
   `isDelete` int NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `membership_orders`
+--
+
+INSERT INTO `membership_orders` (`id`, `rec_date`, `userid`, `registration_date`, `expiry_date`, `card_number`, `amount`, `paymentid`, `isActive`, `isDelete`) VALUES
+(1, '2026-03-30 11:28:14', 1, '2026-03-30', '2026-04-30', '4770025668381532', 1.18, 'cash_I8PTDcdfFVhgz', 1, 0);
 
 -- --------------------------------------------------------
 
@@ -991,7 +1027,7 @@ CREATE TABLE IF NOT EXISTS `membership_orders` (
 DROP TABLE IF EXISTS `migrations`;
 CREATE TABLE IF NOT EXISTS `migrations` (
   `id` int UNSIGNED NOT NULL AUTO_INCREMENT,
-  `migration` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `migration` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `batch` int NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -1011,7 +1047,15 @@ CREATE TABLE IF NOT EXISTS `otp_verifications` (
   `otp` mediumint NOT NULL,
   `acc_type` tinyint NOT NULL DEFAULT '0' COMMENT '0=none, 1=selfapply, 2=loanagent\r\n',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `otp_verifications`
+--
+
+INSERT INTO `otp_verifications` (`id`, `rec_date`, `mobile`, `email`, `otp`, `acc_type`) VALUES
+(1, '2026-03-30', '9408881214', '', 4486, 1),
+(2, '2026-03-30', '9408881214', '', 8214, 1);
 
 -- --------------------------------------------------------
 
@@ -1051,12 +1095,12 @@ CREATE TABLE IF NOT EXISTS `paygic_entry` (
   `rec_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `entryfor` int NOT NULL DEFAULT '0' COMMENT '3 - la offer 1\r\n4 - la offer 2\r\n5 - la offer 3\r\n6 - sa offer 1\r\n7 - sa offer 2\r\n8 - sa offer 3\r\n9 - sa offer 4\r\n10 - la offer 4',
   `userid` int NOT NULL,
-  `orderid` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `orderid` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `orderamount` float(11,2) NOT NULL,
-  `ordernote` varchar(256) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `referenceid` varchar(256) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `txstatus` varchar(256) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `paymentmode` varchar(256) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `ordernote` varchar(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `referenceid` varchar(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `txstatus` varchar(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `paymentmode` varchar(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -1069,11 +1113,11 @@ CREATE TABLE IF NOT EXISTS `paygic_entry` (
 DROP TABLE IF EXISTS `personal_access_tokens`;
 CREATE TABLE IF NOT EXISTS `personal_access_tokens` (
   `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
-  `tokenable_type` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `tokenable_type` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `tokenable_id` bigint UNSIGNED NOT NULL,
-  `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `token` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `abilities` text COLLATE utf8mb4_unicode_ci,
+  `name` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `token` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `abilities` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   `last_used_at` timestamp NULL DEFAULT NULL,
   `expires_at` timestamp NULL DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
@@ -1245,11 +1289,11 @@ CREATE TABLE IF NOT EXISTS `services` (
 
 DROP TABLE IF EXISTS `sessions`;
 CREATE TABLE IF NOT EXISTS `sessions` (
-  `id` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `id` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `user_id` bigint UNSIGNED DEFAULT NULL,
-  `ip_address` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `user_agent` text COLLATE utf8mb4_unicode_ci,
-  `payload` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `ip_address` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `user_agent` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `payload` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `last_activity` int NOT NULL,
   PRIMARY KEY (`id`),
   KEY `sessions_user_id_index` (`user_id`),
@@ -1261,7 +1305,8 @@ CREATE TABLE IF NOT EXISTS `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('eg0FbQZ9uCtsgm3Mii0UHTNkfrIq4RNSdPztLyST', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiSzJGekphTmVJd014Y1RKbUFTS0Z6SnRQNnBpWklEQkVpNW5mNEZzMiI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9kYXNoYm9hcmQiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX1zOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aToxO3M6MzoidXJsIjthOjE6e3M6ODoiaW50ZW5kZWQiO3M6MzU6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9zdGFmZi1hY2NvdW50Ijt9fQ==', 1771328009);
+('JNxT50Q37IDTBEShH9RfFEQ37fnHhGrT6l1vOGnw', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36', 'YTo1OntzOjk6Il9wcmV2aW91cyI7YToxOntzOjM6InVybCI7czozMToiaHR0cDovLzEyNy4wLjAuMTo4MDAxL2Rhc2hib2FyZCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6NjoiX3Rva2VuIjtzOjQwOiJ0bGJnNlJEOGlMZ2xZQ0hPaERSS01oVUpRc3VyUDJaN3ZqRnBneHB0IjtzOjM6InVybCI7YToxOntzOjg6ImludGVuZGVkIjtzOjI4OiJodHRwOi8vMTI3LjAuMC4xOjgwMDEvbG9nb3V0Ijt9czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTt9', 1774851105),
+('LJAgIIviADPMRWbvpzXJTXsbXMM1DA43CRyZBx2g', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiYzhkcUdzYzFIYmFWREhPeklwZmFaaU9HUk1idnk0ZlFnZzBVdVFUTCI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1774849118);
 
 -- --------------------------------------------------------
 
@@ -1283,7 +1328,7 @@ CREATE TABLE IF NOT EXISTS `site_options` (
 --
 
 INSERT INTO `site_options` (`id`, `rec_date`, `option_key`, `option_value`) VALUES
-(1, '2025-09-26 18:07:07', 'newinvoiceno', '16545'),
+(1, '2026-03-30 11:28:37', 'newinvoiceno', '1236'),
 (2, '2024-04-18 11:05:19', 'account-msg-customer', 'For the Customers who have given other customer referrals to the company, it would be compulsory for them to submit their kyc Documents to the company within 30 days. If not submitted, all the payouts of the Customer will be automatically cancelled To  get the cancelled payout, you can contact the company and discuss it.'),
 (3, '2025-02-27 20:11:42', 'sa-wp-remarketing', '#'),
 (4, '2025-02-27 20:11:42', 'sa-wp-getoffer', '#'),
@@ -1293,8 +1338,8 @@ INSERT INTO `site_options` (`id`, `rec_date`, `option_key`, `option_value`) VALU
 (8, '2025-02-27 20:11:42', 'la-wp-getoffer', '#'),
 (9, '2025-02-27 20:11:42', 'la-wp-payment-success', '#'),
 (10, '2025-02-27 20:11:42', 'la-wp-username-password', '#'),
-(11, '2025-06-03 14:46:05', 'last_agent_id', '#'),
-(12, '2025-07-07 13:16:51', 'last_self_agent_id', '#'),
+(11, '2025-06-03 14:46:05', 'last_agent_id', '0'),
+(12, '2025-07-07 13:16:51', 'last_self_agent_id', '0'),
 (13, '2025-07-31 09:03:19', 'last_assistant_id', '0');
 
 -- --------------------------------------------------------
@@ -1387,7 +1432,7 @@ CREATE TABLE IF NOT EXISTS `source_entry` (
   `utm_referral` varchar(99) DEFAULT NULL,
   `client_ip` varchar(55) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `source_entry`
@@ -1399,7 +1444,10 @@ INSERT INTO `source_entry` (`id`, `rec_date`, `user_id`, `utm_source`, `utm_camp
 (3, '2026-02-09 12:06:41', 2, 'web', '', 'direct', '', '', '127.0.0.1'),
 (4, '2026-02-09 12:20:59', 2, 'web', '', 'direct', '', '', '127.0.0.1'),
 (5, '2026-02-09 12:23:15', 3, 'web', '', 'direct', NULL, NULL, '127.0.0.1'),
-(6, '2026-02-13 10:36:52', 4, 'web', '', 'direct', NULL, NULL, '127.0.0.1');
+(6, '2026-02-13 10:36:52', 4, 'web', '', 'direct', NULL, NULL, '127.0.0.1'),
+(7, '2026-03-16 12:03:10', 1, 'web', '', 'direct', NULL, NULL, '127.0.0.1'),
+(8, '2026-03-30 11:16:40', 2, 'web', '', 'direct', NULL, NULL, '127.0.0.1'),
+(9, '2026-03-30 11:23:03', 1, 'web', '', 'direct', NULL, NULL, '127.0.0.1');
 
 -- --------------------------------------------------------
 
@@ -1603,7 +1651,14 @@ CREATE TABLE IF NOT EXISTS `user_registrations` (
   `isActive` tinyint NOT NULL DEFAULT '1' COMMENT '1= active, 0=noactive',
   PRIMARY KEY (`id`),
   KEY `mobile` (`mobile`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `user_registrations`
+--
+
+INSERT INTO `user_registrations` (`id`, `staff_id`, `offerpage`, `rec_date`, `update_date`, `first_name`, `last_name`, `mobile`, `email`, `password`, `dob`, `pancard`, `pincode`, `city`, `state`, `process_step`, `refcode`, `acc_type`, `company_name`, `company_gst`, `isUser`, `iAgree`, `isDnd`, `isVerified`, `isDelete`, `isActive`) VALUES
+(1, 0, 0, '2026-03-30 11:28:14', '2026-03-30 11:28:14', 'uday', 'variya', '9408881214', 'verloop.dev4@gmail.com', '$2y$12$6APGFvDFzEpyg6l5rfaryOb4j7.P1ka3.fAEKOaMKLz0x8VXSAxum', NULL, NULL, '395004', 'Surat', 'Gujarat', 5, 'uda1214', 1, NULL, NULL, 2, 0, 0, 0, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -1672,7 +1727,7 @@ CREATE TABLE IF NOT EXISTS `zaakpay_entry` (
   `transactionid` varchar(256) DEFAULT NULL,
   `paymentmode` varchar(256) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `zaakpay_entry`
@@ -1680,7 +1735,9 @@ CREATE TABLE IF NOT EXISTS `zaakpay_entry` (
 
 INSERT INTO `zaakpay_entry` (`id`, `rec_date`, `entryfor`, `userid`, `orderid`, `orderamount`, `ordernote`, `statuscode`, `transactionid`, `paymentmode`) VALUES
 (1, '2026-02-09 12:13:52', 11, 2, 'ZPLive1770619432849', 1.00, 'Self Apply', NULL, NULL, NULL),
-(2, '2026-02-13 10:51:05', 11, 4, 'ZPLive1770960065812', 234.82, 'Self Apply', NULL, NULL, NULL);
+(2, '2026-02-13 10:51:05', 11, 4, 'ZPLive1770960065812', 234.82, 'Self Apply', NULL, NULL, NULL),
+(3, '2026-03-30 11:20:28', 11, 2, 'ZPLive1774849828280', 1.00, 'Self Apply', NULL, NULL, NULL),
+(4, '2026-03-30 11:23:22', 11, 1, 'ZPLive1774850002491', 1.00, 'Self Apply', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1694,12 +1751,12 @@ CREATE TABLE IF NOT EXISTS `zwitch_entry` (
   `rec_date` datetime NOT NULL,
   `entryfor` int NOT NULL DEFAULT '0',
   `userid` int NOT NULL,
-  `orderid` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `orderid` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `orderamount` float(11,2) NOT NULL,
-  `ordernote` varchar(256) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `referenceid` varchar(256) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `txstatus` varchar(256) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `paymentmode` varchar(256) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `ordernote` varchar(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `referenceid` varchar(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `txstatus` varchar(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `paymentmode` varchar(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 COMMIT;

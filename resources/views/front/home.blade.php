@@ -15,8 +15,8 @@
         <div class="row justify-content-center">
             <div class="col-md-11 col-lg-10 col-xl-9">
                 <div class="hero-17-txt ">
-                    <h2 class="s-40 w-600">We Design Your Roadmap to <span class="color--green-500">Financial Success</span></h2>
-                    <p class="p-xl">Take confident steps toward your goals with structured guidance and technology-powered loan assistance.</p>
+                    <h2 class="s-40 w-600">Helping your financial goals start buzzing <span class="color--green-500">with possibilities</span></h2>
+                    <p class="p-xl">Access smart financial solutions and expert assistance designed to help you take the right steps toward your financial goals.</p>
                     <a href="{{ route('self.apply.main') }}" class="btn r-04 btn--theme hover--tra-black last-link">Self Apply</a>
                     <a href="{{ route('loan.agent.main') }}" class="btn r-04 btn--theme hover--tra-black last-link">Hire an Agent</a>
                 </div>
@@ -45,8 +45,8 @@
         <div class="row justify-content-center">
             <div class="col-md-10 col-lg-9">
                 <div class="section-title mb-50">
-                    <h2 class="s-28">Why <span class="color--green-500">The Loanbee</span></h2>
-                    <p class="s-16 color--grey">Here's What Sets Our Platform Apart</p>
+                    <h2 class="s-28">Why <span class="color--green-500">Choose Us</span></h2>
+                    <p class="s-16 color--grey">Here’s What Makes The Loan Bee Unique.</p>
                 </div>
             </div>
         </div>
@@ -58,8 +58,8 @@
                             <span class="flaticon-layers-1 fs-5"></span>
                         </div>
                         <div class="fbox-txt p-3">
-                            <h4 class="s-18 w-700">End-to-End Easy</h4>
-                            <p>Luctus egestas augue undo ultrice aliquam in lacus congue dapibus</p>
+                            <h4 class="s-18 w-700">Access To Leading NBFCs</h4>
+                            <p>We work with industry-leading NBFCs to provide you with a comprehensive suite of financial services.</p>
                         </div>
                     </div>
                 </div>
@@ -69,19 +69,19 @@
                             <span class="flaticon-computer-1"></span>
                         </div>
                         <div class="fbox-txt p-3">
-                            <h4 class="s-18 w-700">Completely Online Process</h4>
-                            <p>From eligibility check to document submission, everything happens digitally.</p>
+                            <h4 class="s-18 w-700">100% Online Process</h4>
+                            <p>With a few easy clicks, you can start your financial consultation process without having to travel far.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="fbox-2 fb-3 gr--whitesmoke rounded mb-2">
                         <div class="fbox-img h-175 mb-2">
-                             <span class="flaticon-click-1"></span>
+                            <span class="flaticon-click-1"></span>
                         </div>
                         <div class="fbox-txt p-3">
-                            <h4 class="s-18 w-700">Self-Apply Feature</h4>
-                            <p>Take control of your finances while enjoying the benefits of excellent provisions.</p>
+                            <h4 class="s-18 w-700">Expert Financial Consultation</h4>
+                            <p>Increase your financial success by leveraging our experienced in-house experts' insights and strategies.</p>
                         </div>
                     </div>
                 </div>
@@ -91,8 +91,8 @@
                             <span class="flaticon-tech-support"></span>
                         </div>
                         <div class="fbox-txt p-3">
-                              <h4 class="s-18 w-700">Hire Loan Agent</h4>
-                            <p>Get guidance from experienced professionals to improve your loan approval possibilities.</p>
+                            <h4 class="s-18 w-700">Personalized Tracking Portal</h4>
+                            <p>Access relevant information instantly at your fingertips, allowing you to move forward with confidence.</p>
                         </div>
                     </div>
                 </div>
@@ -107,28 +107,21 @@
         <div class="row justify-content-center">
             <div class="col-md-10 col-lg-9">
                 <div class="section-title mb-40">
-                    <h2 class="s-28">About <span class="color--green-500">The Loanbee</span></h2>
-                    <p class="s-16 color--grey">Enabling Better Financial Decisions with Smart, Personalized Support</p>
+                    <h2 class="s-28">About <span class="color--green-500">Us!</span></h2>
+                    <p class="s-16 color--grey">Making your financial journey easier and more confident.</p>
                 </div>
             </div>
 
             <div class="col-lg-6 col-md-6 col-12">
                 <div class="txt-block left-column">
-                    <p class="">The Loanbee is a financial consultation and services company dedicated to helping individuals choose the right loan with ease and confidence. We work closely with our clients to understand their needs and connect them with suitable options through our network of multiple NBFC partners, ensuring a smooth, transparent, and well-guided experience from start to finish.</p>
-                    <p class="">Our objective is simple – remove uncertainty from borrowing and replace it with clarity, process, and informed action.</p>
+                    <p class="">The Loan Bee is a financial consultation and services company that assists individuals in accessing loan facilities with proper direction and support.</p>
+                    <p class="">Our goal is to make the borrowing process easier for people who may not always know where to start. We guide customers through the required steps and help them move forward with better understanding of their options.</p>
                 </div>
             </div>
             <div class="col-lg-6 col-md-6 col-12">
                 <div class="txt-block right-column">
-                    <p class="w-700">Your Growth Is Our Priority</p>
-                    <ul class="simple-list">
-                        <li class="list-item">
-                            <p>We recognize that every applicant’s financial profile is different. Instead of generic recommendations, our system evaluates individual inputs to present structured options aligned with user requirements.</p>
-                        </li>
-                        <li class="list-item">
-                            <p class="mb-0">Transparency, guided steps, and clear communication form the foundation of our approach.</p>
-                        </li>
-                    </ul>
+                    <p class="">Through our working relationships with various NBFCs, we help connect individuals to loan opportunities while keeping the process organized and straightforward.</p>
+                    <p class="">At The Loan Bee, the focus is on honest assistance, clear communication, and helping people handle their financial needs with greater confidence.</p>
                 </div>
             </div>
         </div>
@@ -145,11 +138,11 @@
                         <div class="statistic-block">
                             <div class="statistic-digit">
                                 <h2 class="s-30 w-700 mb-10 text-white">
-                                    <span class="count-element">5000</span>+
+                                    <span class="count-element">5500</span>+
                                 </h2>
                             </div>
                             <div class="statistic-txt">
-                                <h5 class="s-16 w-500 text-white">Applicants Assisted</h5>
+                                <h5 class="s-16 w-500 text-white">Happy Customer</h5>
                             </div>
                         </div>
                     </div>
@@ -159,11 +152,11 @@
                         <div class="statistic-block">
                             <div class="statistic-digit">
                                 <h2 class="s-30 w-700 mb-10 text-white">
-                                    <span class="count-element">10</span>+
+                                    <span class="count-element">4</span>Cr+
                                 </h2>
                             </div>
                             <div class="statistic-txt">
-                                <h5 class="s-16 w-500 text-white">NBFC Partners</h5>
+                                <h5 class="s-16 w-500 text-white">Disbursal</h5>
                             </div>
                         </div>
                     </div>
@@ -173,11 +166,11 @@
                         <div class="statistic-block">
                             <div class="statistic-digit">
                                 <h2 class="s-30 w-700 mb-10 text-white">
-                                    <span class="count-element">15</span>+
+                                    <span class="count-element">8</span>+
                                 </h2>
                             </div>
                             <div class="statistic-txt">
-                                <h5 class="s-16 w-500 text-white">Operational Team Members</h5>
+                                <h5 class="s-16 w-500 text-white">NBFC Partners</h5>
                             </div>
                         </div>
                     </div>
@@ -191,7 +184,7 @@
                                 </h2>
                             </div>
                             <div class="statistic-txt">
-                                <h5 class="s-16 w-500 text-white">Digital Application Model</h5>
+                                <h5 class="s-16 w-500 text-white">Digital Process</h5>
                             </div>
                         </div>
                     </div>
@@ -203,46 +196,46 @@
 <!-- Trust Badges Section ends -->
 
 <!-- Products Intro section starts -->
-   <section id="products" class="py-80 features-section division">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-10 col-lg-10">
-                    <div class="section-title mb-40">
-                        <h2 class="s-28">Boost Your Finances With the <span class="color--green-500">Strategic Approach</span></h2>
-                        <p class="s-16 color--grey">Choose the plan that best fits your needs and preferences.</p>
-                    </div>
+<section id="products" class="py-80 features-section division">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-10 col-lg-10">
+                <div class="section-title mb-40">
+                    <h2 class="s-28">Take a Strategic Approach to Managing <span class="color--green-500">Your Finances</span></h2>
+                    <p class="s-16 color--grey">Choose the plan that best meets your needs and goals.</p>
                 </div>
             </div>
-            <div class="fbox-wrapper text-center">
-                <div class="row d-flex gx-4 gy-4">
-                    <div class="col-md-6">
-                        <div class="fbox-5 fbox--hover fb-2 border r-16">
-                            <div class="fbox-5-img mb-2">
-                                <img class="img-fluid light-theme-img" src="{{ asset('front/images/Easy-Self-Apply-ai.png') }}" alt="feature-image">
-                            </div>
-                            <div class="fbox-txt">
-                                <h3 class="s-22 w-700">Quick Self-Apply</h3>
-                                <p class="mb-20">Sit back and relax! Allow our dedicated expert loan agent to handle the entire loan process on your behalf and increase your chances of approval.</p>
-                                <a href="{{ route('self.apply.main') }}" class="btn r-04 btn--theme hover--tra-black">Apply Now</a>
-                            </div>
+        </div>
+        <div class="fbox-wrapper text-center">
+            <div class="row d-flex gx-4 gy-4">
+                <div class="col-md-6">
+                    <div class="fbox-5 fbox--hover fb-2 border r-16">
+                        <div class="fbox-5-img mb-2">
+                            <img class="img-fluid light-theme-img" src="{{ asset('front/images/Easy-Self-Apply-ai.png') }}" alt="feature-image">
+                        </div>
+                        <div class="fbox-txt">
+                            <h3 class="s-22 w-700">Quick Self-Apply</h3>
+                            <p class="mb-20">Get personalized offers, fast login links, and excellent digital loan consultation from our reliable NBFC partners.</p>
+                            <a href="{{ route('self.apply.main') }}" class="btn r-04 btn--theme hover--tra-black">Apply Now</a>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="fbox-5 fbox--hover fb-2 border r-16">
-                            <div class="fbox-5-img mb-2">
-                                <img class="img-fluid light-theme-img" src="{{ asset('front/images/Hire-Loan-Agent-ai.png') }}" alt="feature-image">
-                            </div>
-                            <div class="fbox-txt">
-                                <h3 class="s-22 w-700">Hire Loan Agent</h3>
-                                <p class="mb-20">Get instant access to the top-quality digital loan consultation, login links, and exclusive personalized loan offer from our trusted NBFC partners.</p>
-                                <a href="{{ route('loan.agent.main') }}" class="btn r-04 btn--theme hover--tra-black">Apply Now</a>
-                            </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="fbox-5 fbox--hover fb-2 border r-16">
+                        <div class="fbox-5-img mb-2">
+                            <img class="img-fluid light-theme-img" src="{{ asset('front/images/Hire-Loan-Agent-ai.png') }}" alt="feature-image">
+                        </div>
+                        <div class="fbox-txt">
+                            <h3 class="s-22 w-700">Hire Loan Agent</h3>
+                            <p class="mb-20">Enjoy a hassle-free experience by letting our experienced loan specialists take care of everything.</p>
+                            <a href="{{ route('loan.agent.main') }}" class="btn r-04 btn--theme hover--tra-black">Apply Now</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 <!-- Products Intro section ends -->
 
 <!-- Quick and swift steps section starts -->
@@ -252,7 +245,7 @@
             <div class="col-md-10 col-lg-9">
                 <div class="section-title mb-40">
                     <h2 class="s-28">How it <span class="color--green-500">works!</span></h2>
-                    <p class="s-16 color--grey">Apply in 6 Simple Steps</p>
+                    <p class="s-16 color--grey">6 Simple Steps for Financial Success.</p>
                 </div>
             </div>
         </div>
@@ -267,7 +260,7 @@
                             </div>
                         </div>
                         <div class="fbox-txt">
-                            <p>Start by providing your mobile number and the name registered with your bank.</p>
+                            <p>Start the process by providing your mobile number and bank-registered name.</p>
                         </div>
                     </div>
                 </div>
@@ -280,7 +273,7 @@
                             </div>
                         </div>
                         <div class="fbox-txt">
-                            <p>Complete your financial information for preliminary eligibility screening.</p>
+                            <p>Complete the remaining fields, and our automated system will check your eligibility and display any pre-approved loan offers. This is not a final offer.</p>
                         </div>
                     </div>
                 </div>
@@ -293,7 +286,7 @@
                             </div>
                         </div>
                         <div class="fbox-txt">
-                            <p>Based on the details you enter, our system displays loan options that may be available to you. These are not final and will be reviewed by the lender.</p>
+                            <p>Access the pre-approved loan offers displayed by purchasing the subscription plan that best suits your needs.</p>
                         </div>
                     </div>
                 </div>
@@ -306,7 +299,7 @@
                             </div>
                         </div>
                         <div class="fbox-txt">
-                            <p>To gain access to the pre-approved loan offers displayed, simply purchase the subscription plan that best fits your needs. </p>
+                            <p>Within 24-48 hours, our login team will contact you for verification and help you move forward.</p>
                         </div>
                     </div>
                 </div>
@@ -319,7 +312,7 @@
                             </div>
                         </div>
                         <div class="fbox-txt">
-                            <p>Submit required documents for profile verification and lender processing.</p>
+                            <p>The NBFC will verify your documents and profile in accordance with the terms and conditions.</p>
                         </div>
                     </div>
                 </div>
@@ -332,7 +325,7 @@
                             </div>
                         </div>
                         <div class="fbox-txt">
-                            <p>The respective NBFC independently reviews the application and makes the final decision on approval and disbursement as per their policies.</p>
+                            <p>The NBFC will make the final decision on loan sanction, approval, and disbursement based on their rules and regulations.</p>
                         </div>
                     </div>
                 </div>
@@ -350,7 +343,7 @@
             <div class="col-md-10 col-lg-10">
                 <div class="section-title mb-40">
                     <h2 class="s-28">Calculate Your <span class="color--green-500">EMI Instantly</span></h2>
-                    <p class="s-16 color--grey">Plan repayments with clarity before proceeding.</p>
+                    <p class="s-16 color--grey">Plan your finances with greater assurance. </p>
                 </div>
             </div>
         </div>
@@ -590,8 +583,8 @@
         <div class="row justify-content-center">
             <div class="col-md-12 col-lg-12">
                 <div class="section-title mb-40">
-                    <h2 class="s-28">What Our <span class="color--green-500">Clients Say</span></h2>
-                    <p class="s-16 color--grey">These words motivate us to work harder.</p>
+                    <h2 class="s-28">Customer <span class="color--green-500">Testimonials</span></h2>
+                    <p class="s-16 color--grey">Hear it straight from our customers.</p>
                 </div>
             </div>
         </div>
